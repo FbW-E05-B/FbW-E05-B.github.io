@@ -1,0 +1,24 @@
+{
+    "name": "geekers",
+    "version": "1.0.0",
+    "description": "this is students of DCI webpage",
+    "scripts": {
+        "start": "sass sass/main.scss css/main.css --no-source-map --watch",
+        "build": "rm -rf build && parcel build src/index.html --dist-dir build --public-url ./",
+        "publish": "gh-pages -d build"
+    },
+    "author": "DCI-Students",
+    "license": "MIT",
+    "devDependencies": {
+        "@parcel/packager-raw-url": "^2.7.0",
+        "@parcel/transformer-sass": "^2.7.0",
+        "@parcel/transformer-webmanifest": "^2.7.0",
+        "gh-pages": "^4.0.0",
+        "live-server": "^1.2.2",
+        "parcel": "^2.7.0",
+        "sass": "^1.54.8"
+    },
+    "dependencies": {
+        "bootstrap": "^5.2.0"
+    }
+}

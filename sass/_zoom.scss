@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #zoom {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 30px 1fr 40px;
+    gap: 5px;
+    background-color: black;
+    color: white;
+    padding-bottom: 20px;
+    overflow: hidden;
+  }
+  #zoom header {
+    background-color:white;
+    padding: 5px;
+    text-align: center;
+    color: rgb(49, 46, 46);
+  }
+  #zoom section {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+  #zoom section div {
+    width: 300px;
+    height: 18vh;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.451);
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  #zoom section div h4 {
+    background-color: rgba(0, 0, 0, 0.574);
+    padding: 2px 5px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: 300;
+
+  }
+  #zoom section div h4::before {
+    content: "\f131";
+    font-family: "font awesome 5 free";
+    font-weight: 600;
+    color: red;
+    margin-right: 5px;
+  }
+  #zoom section  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  #zoom section div:hover {
+    transform: scale(1.05);
+    border: 2px white solid;
+    z-index: 2;
+  }
+
+  #zoom nav {
+    height: 60px;
+    margin-top: 5px;
+    background-color: rgb(48, 47, 47);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 90%;
+  }
+  .nav{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #zoom nav div {
+    height: 100%;
+  }
+
+  #zoom .first-nav {
+    display: flex;
+    width: 15%;
+    justify-content: space-around;
+  }
+  #zoom .first-nav div {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  #zoom .first-nav div:nth-child(1) i {
+    color: red;
+  }
+  #zoom .second-nav {
+    display: flex;
+    width: 35%;
+  }
+  #zoom .second-nav div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  
+   
+  }
+  #zoom nav button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+   
+
+  }
+  
+  #zoom .first-nav div:hover,
+  #zoom .second-nav div:hover {
+    background-color: rgb(85, 79, 79);
+    border-radius: 5px;
+  }
+
+
+  #zoom section div:nth-child(1) {
+ 
+  }
+  #zoom section div:nth-child(2) {
+    background-image: url(/images/chandu.jpg);
+    background-size: cover;
+    
+  }
+ 
+  #zoom section div:nth-child(3) {
+    background-image: url(/images/francis.jpg);
+    background-size: cover;
+    background-position: center top;
+  }
+  #zoom section div:nth-child(4) {
+    background-image: url(/images/teng.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  #zoom section div:nth-child(5) {
+    
+  }
+  #zoom section div:nth-child(6) {
+  
+  }
+  #zoom section div:nth-child(7) {
+    background-image: url(/images/vijaya.jpg);
+    background-size: cover;
+    background-position: bottom;
+  }
+  #zoom section div:nth-child(8) {
+    background-image: url(/images/agartha.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+ background-position: 0px -40px;
+  
+  }
+  #zoom section div:nth-child(9) {
+  
+  }
+  #zoom section div:nth-child(10) {
+    background-image: url(/images/rana.jpg);
+    background-size: cover;
+    background-position: center;
+    
+  }
+  #zoom section div:nth-child(11) {
+ 
+  }
+  #zoom section div:nth-child(12) {
+    background-image: url(/images/janos.jpeg);
+    background-size: cover;
+   
+  }
+  #zoom section div:nth-child(13) {
+   
+  }
+  #zoom section div:nth-child(14) {
+    
+  }
+  #zoom section div:nth-child(15) {
+  
+  }
+  #zoom section div:nth-child(16) {
+    background-image: url(/images/alveena.jpg);
+    background-size: cover;
+   
+  }
+  #zoom section div:nth-child(17) {
+   
+  }
+  #zoom section div:nth-child(18) {
+    background-image: url(/images/diouani.jpg);
+    background-size: cover;
+    background-position: right;
+  }
+  #zoom section div:nth-child(19) {
+  
+  }
+  @media screen and (max-width: 1086px) {
+    .nav::before {
+      content: "\f0c9";
+      font-family: "font awesome 5 free";
+      font-weight: bold;
+      margin-left: 10px;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 5px;
+      background-color: #d3cfd3d5;
+      position: absolute;
+      bottom: -185px;
+    }
+   
+    .first-nav{
+      flex-direction: column;
+      width: 25%;
+      display: none;
+
+    }
+    .second-nav{
+      
+      width: 25%;
+      flex-direction: column;
+    }
+    .nav{
+      flex-direction: column;
+      position: relative;
+      gap: 10px;
+      top: -200px;
+      left: -200px;
+    } 
+    
+    #zoom .first-nav div, #zoom .second-nav div{
+      padding: 5px 10px;
+      flex-direction: row;
+      justify-content: space-between;
+      /* display: none; */
+  
+    }
+    .nav:hover .nav-child{
+      display: block;
+    }
+  }
+ 

@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #zoom {
   width: 100%;
   min-height: 100vh;
@@ -204,9 +210,4 @@
   .nav:hover .nav-child {
     display: block;
   }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }

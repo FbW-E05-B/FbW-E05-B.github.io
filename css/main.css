@@ -73,6 +73,11 @@
   background-repeat: no-repeat;
   background-position: bottom;
 }
+#zoom section div:nth-child(5) {
+  background-image: url(/images/humberto.JPG);
+  background-size: cover;
+  background-position: center;
+}
 #zoom section div:nth-child(7) {
   background-image: url(/images/vijaya.jpg);
   background-size: cover;
@@ -114,6 +119,20 @@
   justify-content: space-between;
   align-items: center;
   font-size: 90%;
+  position: relative;
+}
+#zoom footer nav #check {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+#zoom footer nav .first-icon,
+#zoom footer nav .second-icon {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 2%;
 }
 #zoom footer nav div {
   height: 100%;
@@ -126,15 +145,16 @@
 }
 #zoom footer nav .nav .first-nav {
   display: flex;
-  width: 15%;
-  justify-content: space-around;
+  width: fit-content;
 }
 #zoom footer nav .nav .first-nav div {
-  width: 100%;
+  width: fit-content;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  cursor: pointer;
 }
 #zoom footer nav .nav .first-nav div:hover {
   background-color: rgb(85, 79, 79);
@@ -145,14 +165,16 @@
 }
 #zoom footer nav .nav .second-nav {
   display: flex;
-  width: 35%;
+  width: fit-content;
 }
 #zoom footer nav .nav .second-nav div {
+  width: fit-content;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
+  cursor: pointer;
 }
 #zoom footer nav .nav .second-nav div:hover {
   background-color: rgb(85, 79, 79);
@@ -169,45 +191,80 @@
 }
 
 @media screen and (max-width: 1086px) {
-  .nav::before {
-    content: "\f0c9";
-    font-family: "font awesome 5 free";
-    font-weight: bold;
-    margin-left: 10px;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 5px;
-    background-color: rgba(211, 207, 211, 0.8352941176);
-    position: absolute;
-    bottom: -185px;
+  #zoom footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
-  .first-nav {
-    flex-direction: column;
-    width: 25%;
+  #zoom footer nav {
+    padding: 0 10px;
+  }
+  #zoom footer nav .first-icon {
+    display: inline-block;
+    height: 40px;
+    font-size: 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  #zoom footer nav .second-icon {
+    display: none;
+    height: 40px;
+    font-size: 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  #zoom footer nav #check:checked + .first-icon {
     display: none;
   }
-  .second-nav {
-    width: 25%;
-    flex-direction: column;
-  }
-  .nav {
-    flex-direction: column;
-    position: relative;
-    gap: 10px;
-    top: -200px;
-    left: -200px;
-  }
-  #zoom .first-nav div,
-#zoom .second-nav div {
-    padding: 5px 10px;
-    flex-direction: row;
-    justify-content: space-between;
-    /* display: none; */
-  }
-  .nav:hover .nav-child {
+  #zoom footer nav #check:checked ~ .second-icon {
     display: block;
+  }
+  #zoom footer nav #check:checked ~ .nav .first-nav {
+    display: flex;
+  }
+  #zoom footer nav #check:checked ~ .nav .second-nav {
+    display: flex;
+  }
+  #zoom footer nav .nav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  #zoom footer nav .nav .first-nav {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    left: 1%;
+    top: -14rem;
+    padding: 5px 0;
+  }
+  #zoom footer nav .nav .first-nav div {
+    width: 100px;
+  }
+  #zoom footer nav .nav .second-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: -10rem;
+    left: 1%;
+    padding: 5px 0;
+  }
+  #zoom footer nav .nav .second-nav div {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #zoom footer nav .nav .first-nav {
+    height: fit-content;
+    background: rgb(0, 0, 0);
+  }
+  #zoom footer nav .nav .first-nav div {
+    width: 100vw;
+  }
+  #zoom footer nav .nav .second-nav {
+    height: fit-content;
+    background: rgb(0, 0, 0);
+  }
+  #zoom footer nav .nav .second-nav div {
+    width: 100vw;
   }
 }

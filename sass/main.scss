@@ -9,5 +9,22 @@
   background-color: tomato;
 }
 
+footer {
+  background-color: black;
+  color: rgb(192, 192, 192);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-geekers {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 3px 3px 2px rgba(150, 150, 150, 1);
+}
+.dci-logo {
+  width: 8rem;
+}
+
 @import 'zoom';
 @import 'mediazoom';

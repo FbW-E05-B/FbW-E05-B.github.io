@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Shadows Into Light", cursive;
+}
+
+body {
+  background-color: #222222;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0rem 0rem;
+  max-width: 100rem;
+  font-size: 1.5rem;
+  height: 80px;
+}
+
+header p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 2.3rem;
+  color: whitesmoke;
+}
+
+.header-geekers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+header img {
+  width: 50px;
+}
+.header-nav ul {
+  display: flex;
+  gap: 1.4rem;
+}
+.header-logo {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+}
+
+.menuList {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+
+  a {
+  text-decoration: none;
+  font-family: "Work Sans", sans-serif;
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    rgb(213, 207, 207) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  position: relative;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+a:before {
+  content: "";
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  background-position: 0;
+}
+
+a:hover::before {
+  width: 100%;
+}
+}
+
+
+ 
+
+.hero {
+  height: calc(100vh - 160px);
+  background-color: #1a1a1a;
+  overflow: hidden;
+  position: relative;
+}
+
+.blocks {
+  position: absolute;
+  z-index: 1;
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  animation-name: overlay;
+  animation-delay: 4.5s;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  width: 18rem;
+  height: 9.5rem;
+  background-color: #222222;
+}
+
+.top {
+  min-height: calc(50vh - 71px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+}
+
+.top img,
+.bottom img {
+  width: 15rem;
+}
+
+.txt1 {
+  border-radius: 50px;
+  font-size: 10rem;
+  color: #f8f4f4;
+  margin-left: 15rem;
+  position: absolute;
+  z-index: 2;
+}
+
+.cover1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: calc(50vh - 71px);
+  width: 100%;
+  background-color: #1a1a1a;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bottom {
+  min-height: calc(50vh - 75px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: relative;
+}
+
+.txt2 {
+  border-radius: 50px;
+  font-size: 12rem;
+  color: #f8f4f4;
+  margin-right: 20rem;
+  position: absolute;
+  z-index: 2;
+}
+
+.txt2 span {
+  font-size: 7rem;
+}
+
+.cover2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-height: calc(50vh - 75px);
+  width: 100%;
+  background-color: #1a1a1a;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.btn {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #202020;
+  margin-right: 2rem;
+  position: absolute;
+  bottom: 50px;
+  z-index: 5;
+}
+
+.btn i {
+  color: #011627;
+}
+
+footer {
+  height: 80px;
+  background-color: #222222;
+  color: rgb(192, 192, 192);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-geekers {
+  font-family: "Work Sans", sans-serif;
+  font-size: 2.2rem;
+  color: white;
+  text-shadow: 3px 3px 2px rgba(150, 150, 150, 1);
+}
+.dci-logo {
+  width: 8rem;
+}
+
+@keyframes overlay {
+  from {opacity: 1;}
+  to {opacity: 0.2;}
+}
